@@ -1,0 +1,38 @@
+body {
+  background: rgb(157, 223, 221) !important;
+  background: radial-gradient(circle, rgba(157, 223, 221, 1) 0%, rgba(151, 233, 148, 1) 100%) !important;
+}
+.navbar-toggler {
+  border: none;
+}
+.navbar-toggler:focus {
+  box-shadow: none;
+  outline: none;
+}
+.nav-link {
+  color: #666777;
+  font-weight: 500;
+  position: relative;
+}
+.nav-link:hover,
+nav-link.active {
+  color: rgb(221, 98, 255);
+}
+@media (min-width: 991px) {
+  .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    background-color: #7b94b2;
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+  }
+  .nav-link:hover::before {
+    visibility: visible;
+    width: 80%;
+  }
+}
